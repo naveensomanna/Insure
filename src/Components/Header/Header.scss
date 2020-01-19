@@ -1,0 +1,53 @@
+@import "../../Styles/variable";
+
+@mixin flexItems($direction, $space, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $space;
+  align-items: $align;
+}
+
+.header-container {
+  height: 80px;
+  background-color: $white;
+  .header-list {
+    @include flexItems(row, space-between, center);
+    height: 100%;
+    width: 78%;
+    margin: 0 auto;
+    .list-wrapper {
+      width: 40%;
+      @include flexItems(row, space-between, center);
+      .item {
+        text-transform: uppercase;
+        color: $light-gray;
+        font-size: $smaller-font-size;
+        font-weight: $heading-font-weight;
+        letter-spacing: $basic-letter-spacing;
+        cursor: pointer;
+      }
+      .btn {
+        border: 2px solid $dark-grayish-violet;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: $small-font-size;
+      }
+    }
+    .menu {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .header-container {
+    .header-list {
+      .list-wrapper {
+        display: none;
+      }
+      .menu {
+        display: block;
+      }
+    }
+  }
+}

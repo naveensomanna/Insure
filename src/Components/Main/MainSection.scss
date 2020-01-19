@@ -1,0 +1,73 @@
+@import "../../Styles/variable";
+
+.main-container {
+  min-height: 800px;
+  position: relative;
+  .intro-container {
+    min-height: 550px;
+    background-color: $main-header-bg;
+    overflow: hidden;
+    position: relative;
+    .intro-description {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+      margin-left: 150px;
+      .title {
+        color: $white;
+        width: 80%;
+        font-size: 4rem;
+        text-align: justify;
+        margin: 0;
+        line-height: 65px;
+        font-weight: 600;
+      }
+    }
+    .intro-right-bg {
+      background-image: url("../../images//bg-pattern-intro-right-desktop.svg");
+      background-repeat: no-repeat;
+      position: absolute;
+      top: -70px;
+      right: 0px;
+      width: 400px;
+      height: 800px;
+      z-index: 2;
+    }
+  }
+  .intro-image {
+    background-image: url("../../images/image-intro-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    width: 600px;
+    height: 600px;
+    z-index: 1;
+  }
+  .intro-left-bg {
+    background-image: url("../../images/bg-pattern-intro-left-desktop.svg");
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: -180px;
+    left: 0;
+    width: 600px;
+    height: 600px;
+    z-index: 3;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-container {
+    .intro-image {
+      background-image: url("../../images/image-intro-mobile.jpg");
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 400px;
+      background-size: cover;
+      position: relative;
+      top: 0;
+      right: 0;
+    }
+  }
+}
