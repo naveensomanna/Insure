@@ -4,15 +4,20 @@
   min-height: 800px;
   position: relative;
   .intro-container {
-    min-height: 550px;
+    height: 550px;
     background-color: $main-header-bg;
     overflow: hidden;
     position: relative;
     .intro-description {
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       width: 40%;
-      margin-left: 150px;
+      height: 65%;
+      margin: 100px 0 0 150px;
+      .hr-line {
+        width: 20%;
+      }
       .title {
         color: $white;
         width: 80%;
@@ -21,6 +26,22 @@
         margin: 0;
         line-height: 65px;
         font-weight: 600;
+      }
+      .sub-title {
+        color: $white;
+        line-height: 1.6rem;
+        text-align: justify;
+        font-size: $small-font-size;
+        letter-spacing: 0.6px;
+      }
+      .btn {
+        border: 2px solid $white;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: $smaller-font-size;
+        width: 25%;
+        color: $white;
       }
     }
     .intro-right-bg {

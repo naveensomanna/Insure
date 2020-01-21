@@ -1,0 +1,44 @@
+@import "../../Styles/variable";
+
+.different-container {
+  margin: 0 auto;
+  width: 78%;
+  .hr-line {
+    width: 15%;
+  }
+  .title {
+    font-size: 4rem;
+    text-align: justify;
+  }
+  .list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      height: 200px;
+      margin-right: 50px;
+      .circle {
+        background-color: hsl(216, 30%, 68%);
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+      }
+      .description-container {
+        span {
+          text-align: justify;
+          display: flex;
+          justify-content: flex-start;
+        }
+        p {
+          text-align: justify;
+          margin: 0;
+          font-size: $small-font-size;
+        }
+      }
+    }
+  }
+}
